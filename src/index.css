@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  	@apply bg-gradient-to-tr from-darkPrimary via-darkThird to-darkSecondary text-whitePrimary min-h-screen h-full
+}
+
+* {
+	::-webkit-scrollbar {
+		display: none;
+	}
+
+	scroll-behavior: smooth;
+	scrollbar-width: none !important;
+
+	/* menghilangkan scroll */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: transparent transparent;
+	}
+
+	*::-webkit-scrollbar {
+		width: 0;
+	}
+
+	*::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: transparent;
+	}
+}
+
+.tooltip-text {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip-text {
+	visibility: visible;
+	opacity: 1;
+}
